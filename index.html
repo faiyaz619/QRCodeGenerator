@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateCustomQRCode</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <main class="flex justify-center">
+        <div class="bg-[#AA96DA] h-screen w-full flex justify-center items-center">
+            <div class=" m-10 bg-[black] text-[silver] h-[400px] rounded-lg shadow-green-500 ">
+                <div class="m-10 flex flex-col justify-between">
+                    <div class="row m-4 flex justify-between ">
+                        <label class="gap-4 ">Enter Height:</label>
+                        <input type="number" id="userHeight" placeholder="400" class="p-2 text-black"
+                        min="0" max="1000">
+                    </div>
+                    <div class="row m-4 flex justify-between">
+                        <label class="gap-4" >Enter Width</label>
+                        <input type="number" id="userWidth" placeholder="400" class="p-2 text-black" min="0" max="1000">
+                    </div>
+                    <div class="row m-4 flex justify-between">
+                        <label class="gap-4">Enter Text:</label>
+                        <input type="text" id="userText" placeholder="Enter your Text here " class="p-2 ml-4 w-[250px] text-black">
+                    </div>
+                    <div class="m-4 flex justify-center items-center">
+                        <button id="" class=" h-[40px] w-[200px] bg-white rounded text-black hover:bg-lime-400 font-extrabold " type="submit" value="submit" onclick="generateQR()">Submit</button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#C5FAD5] h-screen w-full flex justify-center items-center flex-col">
+            <div class="mb-2" id="imageQR">
+                <a href="" download="">
+                    <img id="image" src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=300x300" alt="" title="" />
+                </a>
+            </div>
+            <div class= "mt-4 font-bold text-2xl hover:font-extrabold hover:text-rose-400">
+                <P>Scan Me!</P>
+            </div>
+            <div class="m-4">
+                <button id="download" class=" h-[40px] w-[200px] bg-emerald-400 rounded text-black hover:bg-lime-400 font-bold " type="submit" value="submit" onclick="">Download</button>
+            </div> 
+        </div> 
+    </main>
+    <script src="./app/app.js"></script>
+</body>
+</html>
